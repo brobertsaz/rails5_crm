@@ -31,10 +31,15 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'haml'
 gem 'haml-rails'
 gem 'omniauth'
-gem 'devise_token_auth'
+gem 'devise'
+gem 'devise-bootstrap-views'
 gem 'kaminari'
+gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'simple_form'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -43,7 +48,7 @@ group :development, :test do
 
   # Use Factory Girl for generating random test data
   gem 'factory_girl_rails'
-  gem 'byebug', platform: :mri
+  gem 'pry-byebug'
 end
 
 group :development do
@@ -60,6 +65,11 @@ group :test do
   gem 'faker'
   gem 'database_cleaner'
 end
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
